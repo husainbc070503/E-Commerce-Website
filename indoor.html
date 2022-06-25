@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6ccdd39db5.js" crossorigin="anonymous"></script>
+
+    <style>
+        .small-container {
+            width: 100%;
+            margin: auto;
+            padding: 0 100px;
+            border: 6px solid transparent;
+            border-image: url('http://3.bp.blogspot.com/__Sis4WwAgyo/SxDIF60pDxI/AAAAAAAAAs4/MhncIiJzBSE/s1600/border+(34).jpg') 30;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
+        .col-4 {
+            flex-basis: 25%;
+            padding: 50px;
+            width: 200px;
+            transition: transform 1s;
+        }
+
+        .col-4 img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .row2 {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 7vmin;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: transform 0.6s;
+        }
+
+        h2:hover {
+            color: #0af639;
+            transform: scale(1.2);
+        }
+
+        h4 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .checked {
+            color: #0af639;
+            margin-bottom: 10px;
+        }
+
+        .col-4:hover {
+            transform: translateY(-15%);
+        }
+
+        select {
+            width: 200px;
+            padding: 10px;
+            height: 20%;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 20px;
+            border: 2px solid #0af639;
+            cursor: pointer;
+        }
+
+        select option {
+            background-color: black;
+            color: white;
+        }
+
+        .page-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-btn i {
+            display: inline-block;
+            border: 3px solid #0af639;
+            padding: 10px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.6s;
+            border-radius: 30px;
+        }
+
+        .page-btn i:hover {
+            background-color: #0af639;
+        }
+
+        .row p {
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        @media only screen and (max-width:880px) {
+            .row {
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+
+            .row2 {
+                display: flex;
+            }
+
+            .row2 h2 {
+                margin-bottom: 20px;
+            }
+
+            .page-btn i {
+                width: 30px;
+                height: 30px;
+                font-size: 3vmin;
+                padding: 5px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="header"
+        style="height: 400px;background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)), url('https://www.lovethatdesign.com/wp-content/uploads/2016/12/20161208-Go-Sport-BRC-01.jpg') no-repeat center;">
+        <i class="fa-solid fa-bars" id="menu-btn"></i>
+        <nav>
+            <ul class="links" id="nav-links">
+                <li><a href="index.html">GLSports</a></li>
+                <li><a href="index.html#aboutus">About Us</a></li>
+                <li><a href="indoor.html">Indoor</a></li>
+                <li><a href="outdoor.html">Outdoor</a></li>
+                <li><a href="index.html#footer">Explore</a></li>
+            </ul>
+        </nav>
+        <div class="content" style="top: 30%;">
+            <h2 style="font-size: 10vmin;text-shadow: none;position: relative;">INDOOR</h2>
+            <p class="text" style="font-size: 3vmin;margin-bottom: 0;line-height: 50px;">
+                All kind of men's and women's wear sports utilities are available here!
+            </p>
+        </div>
+    </header>
+
+    <div class="small-container">
+        <div class="row row2">
+            <h2>All Products</h2>
+            <select name="select" id="select">
+                <option>Default</option>
+                <option>Sort by costs</option>
+                <option>Sort by rating</option>
+                <option>Sort by popularity</option>
+                <option>Sort by sale</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="https://n3.sdlcdn.com/imgs/h/a/5/366-SUPER-02-Multi-Color-SDL424042830-2-e60c6.JPG" alt="">
+                <h4>Multi Color Running Shoes</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>Rs.1000.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://cdn.sweatband.com/Wilson_Tour_Vision_Mens_Tennis_Shoes_2_2000x2000.jpg" alt="">
+                <h4>Wilson Tour Vision Mens Tennis Shoes</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>Rs.2000.00</p>
+            </div>
+            <div class="col-4">
+                <img src="http://images.the-house.com/salomon-xr-mission-wmns-shoes-papaya-blk-igloo-blue-16-2.jpg"
+                    alt="">
+                <h4>Salomon Mission Shoes</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                </div>
+                <p>Rs.3000.00</p>
+            </div>
+            <div class="col-4">
+                <img src="http://images.the-house.com/dvs-comanche-shoes-blk-white-blk-trubuck-16.jpg" alt="">
+                <h4>DVS Comanche Skate</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>Rs.4000.00</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="https://i5.walmartimages.com/asr/8b09b7c6-e135-4522-ab18-a7331c6ce50c_1.88e42e149e5d0c819eba325aa231c4b3.jpeg"
+                    alt="">
+                <h4>Running Jogging Shirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>Rs.500.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://i5.walmartimages.com/asr/79201ac8-3d73-4360-8d98-37b23948c121_1.145678986ebdd6e9b463690d49f4c9fd.jpeg"
+                    alt="">
+                <h4>Contender Polo Shirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                </div>
+                <p>Rs.600.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://i5.walmartimages.com/asr/d1781e76-3c35-4643-ab2c-a6ab6285ebb8_1.aba154c3a27c4db0bc7d748a6b602957.jpeg"
+                    alt="">
+                <h4>Placket Polo Shirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>Rs.700.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://www.iprosports.co.uk/wp-content/uploads/2015/10/WLTSC-Mens-Classic-Sports-T-Shirt.jpg"
+                    alt="">
+                <h4>WLTSC-Mens-Classic-Sports-T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>Rs.800.00</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="https://cdnb.lystit.com/photos/size/e0ccb747/adidas-originals-Navy-Beckenbauer-Track-Pants.jpeg"
+                    alt="">
+                <h4>Adidas Originals Track Pant</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>Rs.1000.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://www.80scasualclassics.co.uk/images/ellesse-avico-track-pants-navy-p12243-73315_image.jpg"
+                    alt="">
+                <h4>Ellesse Comfort Track Pant</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>Rs.2000.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://cdna.lystit.com/photos/jdsports/3868602453-Grey-af373519-.jpeg" alt="">
+                <h4>Lyst-Nike Tech Knit Track Pant</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                </div>
+                <p>Rs.3000.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://lh5.googleusercontent.com/MyVuQpme1d8Ggj6MwgY2f3uvdnYff3PAC2fXnE1Wbqq5ANTxMTbsRW3yBL4NZo_tOPe1c-z0Pxk2Y2F6SIsZ0xw6L50jBIUo07ftJMOwxaGtJmRO9L6YJaN6d0Q0ZJQAvc7haHg2"
+                    alt="">
+                <h4>Women Track Pant</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>Rs.4000.00</p>
+            </div>
+        </div>
+        <div class="page-btn">
+            <i class="fa-solid fa-1"></i>
+            <i class="fa-solid fa-2"></i>
+            <i class="fa-solid fa-3"></i>
+            <i class="fa-solid fa-4"></i>
+            <i class="fa-solid fa-5"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-cols">
+                <ul>
+                    <li>Shop & Play</li>
+                    <div class="line"></div>
+                    <li><a href="#">3d Sports</a></li>
+                    <li><a href="#">Arcade Games</a></li>
+                    <li><a href="#">Virtual Reality</a></li>
+                    <li><a href="#">Merchandise</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                </ul>
+                <ul>
+                    <li>GLSports Store</li>
+                    <div class="line"></div>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#">Today at GLSports</a></li>
+                    <li><a href="#">Sports Camp</a></li>
+                    <li><a href="#">Entertainment</a></li>
+                    <li><a href="#">Order Sports Items</a></li>
+                </ul>
+                <ul>
+                    <li>Education & Business</li>
+                    <div class="line"></div>
+                    <li><a href="#">GL & Education</a></li>
+                    <li><a href="#">Shop for Courses</a></li>
+                    <li><a href="#">Gl & Business</a></li>
+                    <li><a href="#">Shop for Business</a></li>
+                    <li><a href="#">Jobs</a></li>
+                </ul>
+                <ul>
+                    <li>About GL</li>
+                    <div class="line"></div>
+                    <li><a href="#">Newsroom</a></li>
+                    <li><a href="#">Gl Leardership</a></li>
+                    <li><a href="#">GL Blogs</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contact GL</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyright &copy; Husain Champawala GLSports</p>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $('#menu-btn').on('click', function () {
+                $('#nav-links').toggleClass('mobile-menu')
+                $('#menu-btn').toggleClass('fa-solid fa-x')
+                $('#header').css({
+                    'height': '500px'
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

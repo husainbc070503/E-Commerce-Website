@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6ccdd39db5.js" crossorigin="anonymous"></script>
+
+    <style>
+        .small-container {
+            width: 100%;
+            margin: auto;
+            padding: 0 100px;
+            border: 6px solid transparent;
+            border-image: url('http://3.bp.blogspot.com/__Sis4WwAgyo/SxDIF60pDxI/AAAAAAAAAs4/MhncIiJzBSE/s1600/border+(34).jpg') 30;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
+        .col-4 {
+            flex-basis: 25%;
+            padding: 50px;
+            width: 200px;
+            transition: transform 1s;
+        }
+
+        .col-4 img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .row2 {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 7vmin;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: transform 0.6s;
+        }
+
+        h2:hover {
+            color: #0af639;
+            transform: scale(1.2);
+        }
+
+        h4 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .checked {
+            color: #0af639;
+            margin-bottom: 10px;
+        }
+
+        .col-4:hover {
+            transform: translateY(-15%);
+        }
+
+        select {
+            width: 200px;
+            padding: 10px;
+            height: 20%;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 20px;
+            border: 2px solid #0af639;
+            cursor: pointer;
+        }
+
+        select option {
+            background-color: black;
+            color: white;
+        }
+
+        .page-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-btn i {
+            display: inline-block;
+            border: 3px solid #0af639;
+            padding: 10px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.6s;
+            border-radius: 30px;
+        }
+
+        .page-btn i:hover {
+            background-color: #0af639;
+        }
+
+        .row p {
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        @media only screen and (max-width:880px) {
+            .row {
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+
+            .row2 {
+                display: flex;
+            }
+
+            .row2 h2 {
+                margin-bottom: 20px;
+            }
+
+            .page-btn i {
+                width: 30px;
+                height: 30px;
+                font-size: 3vmin;
+                padding: 5px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="header"
+        style="height: 400px;background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)), url('https://betterbaseball.com/media/wysiwyg/Better_Baseball/BetterBaseball/StoreEntry.jpg') no-repeat center center;">
+        <i class="fa-solid fa-bars" id="menu-btn"></i>
+        <nav>
+            <ul class="links" id="nav-links">
+                <li><a href="index.html">GLSports</a></li>
+                <li><a href="index.html#aboutus">About Us</a></li>
+                <li><a href="indoor.html">Indoor</a></li>
+                <li><a href="outdoor.html">Outdoor</a></li>
+                <li><a href="index.html#footer">Explore</a></li>
+            </ul>
+        </nav>
+        <div class="content" style="top: 30%;">
+            <h2 style="font-size: 10vmin;text-shadow: none;position: relative;">OUTDOOR</h2>
+            <p class="text" style="font-size: 5vmin;margin-bottom: 0;">
+                All kind of men's and women's wear sports utilities are available here!
+            </p>
+        </div>
+    </header>
+
+    <div class="small-container">
+        <div class="row row2">
+            <h2>All Products</h2>
+            <select name="select" id="select">
+                <option>Default</option>
+                <option>Sort by costs</option>
+                <option>Sort by rating</option>
+                <option>Sort by popularity</option>
+                <option>Sort by sale</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="https://www.rjrsports.com.au/wp-content/uploads/2017/07/2-piece-cricket-ball-4.png" alt="">
+                <h4>Australian Leather Cricket Ball</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                </div>
+                <p>$52.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://shop.pcia.info/wp-content/uploads/2021/01/White-Premier-Side-scaled.jpg" alt="">
+                <h4>White Cricket Ball</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                </div>
+                <p>$60.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://i-bosity-com.oss-cn-hongkong.aliyuncs.com/product_img/270/75011546/75011546_1_image.jpg?x-oss-process=image/resize,p_100/watermark,image_d2F0ZXJtYXJrX2ltZy8xNzExMTQxNS9kZWZhdWx0LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSxQXzk5,g_nw,x_0,y_0"
+                    alt="">
+                <h4>Soccer Ball</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>$10.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://www.bishopsport.co.uk/user/products/large/VB2150.jpg" alt="">
+                <h4>VolleyBall FIVB Game Ball</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>$70.00</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="https://img.thrfun.com/img/219/918/uses_for_tennis_balls_tx.jpg"
+                    alt="">
+                <h4>Tennis Ball</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://sp.yimg.com/ib/th?id=OP.BY5Dfea%2fJ4%2bXXw474C474&o=5&pid=21.1"
+                    alt="">
+                <h4>New MRF Virat Kholi Bat</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                </div>
+                <p>$52.50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="http://www.sccricket.com/wp-content/uploads/2019/01/ALLweb-1.jpg"
+                    alt="">
+                <h4>English Willow Bat</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>$70.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://cdn.sweatband.com/wilson_burn_100_uls_tennis_racket_wilson_burn_100_uls_tennis_racket_-_side_2000x2000.jpg"
+                    alt="">
+                <h4>Tennis Racket</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>$30.00</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="https://www.mrcrickethockey.com/wp-content/uploads/2020/08/Dita-Hockey-CarboTec-Pro-c100-Hockey-Stick.jpg"
+                    alt="">
+                <h4>hockey Carbo Tec Stick</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>$100.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://shop.dkoutlet.com/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/p/l/plyr-g-2232.jpg"
+                    alt="">
+                <h4>Pool Cue Stick</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>$72.50</p>
+            </div>
+            <div class="col-4">
+                <img src="https://fitnessequipments.com.au/wp-content/uploads/2020/02/nldtzqj-scaled.jpg" alt="">
+                <h4>Carrom Board with coins</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>$500.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://fthmb.tqn.com/eByMuSdaTcGmTS-ZI1jo58ItcJI=/3709x3328/filters:fill(auto,1)/basketball--on-white--172936019-58ff91203df78ca1596fbbcc.jpg"
+                    alt="">
+                <h4>BasketBall</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                </div>
+                <p>$40.00</p>
+            </div>
+        </div>
+        <div class="page-btn">
+            <i class="fa-solid fa-1"></i>
+            <i class="fa-solid fa-2"></i>
+            <i class="fa-solid fa-3"></i>
+            <i class="fa-solid fa-4"></i>
+            <i class="fa-solid fa-5"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-cols">
+                <ul>
+                    <li>Shop & Play</li>
+                    <div class="line"></div>
+                    <li><a href="#">3d Sports</a></li>
+                    <li><a href="#">Arcade Games</a></li>
+                    <li><a href="#">Virtual Reality</a></li>
+                    <li><a href="#">Merchandise</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                </ul>
+                <ul>
+                    <li>GLSports Store</li>
+                    <div class="line"></div>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#">Today at GLSports</a></li>
+                    <li><a href="#">Sports Camp</a></li>
+                    <li><a href="#">Entertainment</a></li>
+                    <li><a href="#">Order Sports Items</a></li>
+                </ul>
+                <ul>
+                    <li>Education & Business</li>
+                    <div class="line"></div>
+                    <li><a href="#">GL & Education</a></li>
+                    <li><a href="#">Shop for Courses</a></li>
+                    <li><a href="#">Gl & Business</a></li>
+                    <li><a href="#">Shop for Business</a></li>
+                    <li><a href="#">Jobs</a></li>
+                </ul>
+                <ul>
+                    <li>About GL</li>
+                    <div class="line"></div>
+                    <li><a href="#">Newsroom</a></li>
+                    <li><a href="#">Gl Leardership</a></li>
+                    <li><a href="#">GL Blogs</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contact GL</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyright &copy; Husain Champawala GLSports</p>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $('#menu-btn').on('click', function () {
+                $('#nav-links').toggleClass('mobile-menu')
+                $('#menu-btn').toggleClass('fa-solid fa-x')
+                $('#header').css({
+                    'height': '500px'
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
